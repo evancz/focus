@@ -62,8 +62,8 @@ because it is sort of like a lens that only lets you see in one direction.
 Implementations of this idea in JS and Clojure rely heavily on the fact that the
 languages are dynamically typed and you can do runtime introspection. Haskell
 relies heavily on Template Haskell (a sort of macro system) to generate all of
-the necessary code. In Elm, I think we'd need to implement [type-directed
-macros][tdm] to make this truly pleasant in Elm, but the primary motivation for
-doing that feature is still for serialization to JSON, XML, binary, etc.
+the necessary code. In Elm, [type-directed macros][tdm] may make things more
+convenient, but it is unclear exactly how this might work or if it is
+worthwhile.
 
 [tdm]: https://docs.google.com/document/d/11a7W5u2U6WkfVH5W8AMHz4I08cHnuJFtjVWjbcZtUO4/edit#heading=h.bw7ajrm0ql11
