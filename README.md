@@ -5,6 +5,21 @@ most basic level, it lets you `get` and `set` fields of a record in a simple and
 composable way. This means you could avoid writing special record update syntax
 and use something that composes much more elegantly.
 
+The goal is to write code something like `freeze` in the following snippet:
+
+```haskell
+mario =
+    { super = False
+    , fire  = False
+    , physics = { position = { x=3, y=4 }
+                , velocity = { x=1, y=1 }
+                }
+    }
+
+freeze object =
+    set (physics => velocity) { x=0, y=0 } object
+```
+
 ## Possible Anti-Pattern?
 
 It is possible that the concept of a `Focus` is harmful to code quality in that
