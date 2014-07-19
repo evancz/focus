@@ -5,7 +5,7 @@ most basic level, it lets you `get` and `set` fields of a record in a simple and
 composable way. This means you could avoid writing special record update syntax
 and use something that composes much more elegantly.
 
-The goal is to write code something like `freeze` in the following snippet:
+It gives you the ability to write stuff like `freeze` in the following snippet:
 
 ```haskell
 mario =
@@ -19,6 +19,19 @@ mario =
 freeze object =
     set (physics => velocity) { x=0, y=0 } object
 ```
+
+The *actual* goal of this library is to help architect large projects with many
+independent widgets. If we have three widgets with some shared state, we do not
+necassarily want to give each widget full access to that shared state. Instead
+we can have them return a function that acts just on the state they care about,
+and we can use a `Focus` to apply that change.
+
+It is not yet clear if this will actually be any nicer than just using typical
+record update syntax in a [well-architected][architecture] application, because
+it is likely no one is actually dealing with particularly deep records. More
+experimentation is needed to figure this out.
+
+[architecture]: https://gist.github.com/evancz/2b2ba366cae1887fe621
 
 ## Possible Anti-Pattern?
 
