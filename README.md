@@ -8,11 +8,10 @@ and use something that composes much more elegantly.
 ## Possible Anti-Pattern?
 
 It is possible that the concept of a `Focus` is harmful to code quality in that
-it can help you to be lax with abstraction boundaries. A modular architecture as
-described [here](https://gist.github.com/evancz/2b2ba366cae1887fe621) happens
-quite naturally in a world without `Focus`, but with the concept of `Focus`
-there's a feeling that "maybe modularity is for suckers... Maybe I can get away
-without it!"
+it can help you to be lax with abstraction boundaries. By making it easy to
+look deep inside of data structures, it encourages you to stop thinking about
+how to make these substructures modular, perhaps leading to an architecture that
+is not as nice and has extra conceptual complexity.
 
 The deeper problem may be that lenses are best when they are bidirectional,
 whereas a `Focus` is only in one direction. The issue is then that making proper
