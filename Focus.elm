@@ -1,4 +1,4 @@
-module Focus (get, set, update, (=>), create) where
+module Focus (Focus, get, set, update, (=>), create) where
 {-| Our goal is to update a field deep inside some nested records. For example,
 if we want to add one to `object.physics.velocity.x` or set it to zero, we would
 be writing code like this:
