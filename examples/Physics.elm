@@ -19,8 +19,8 @@ object =
 physics : Float -> Object -> Object
 physics dt object =
     object
-      |> update (position => x) (\px -> px + object.velocity.x * dt)
-      |> update (position => y) (\py -> py + object.velocity.y * dt)
+        |> update (position => x) (\px -> px + object.velocity.x * dt)
+        |> update (position => y) (\py -> py + object.velocity.y * dt)
 
 main : Element
 main = asText (physics 1 object)
@@ -35,8 +35,10 @@ y : Focus { r | y:a } a
 y = create .y (\f r -> { r | y <- f r.y })
 
 position : Focus { r | position:a } a
-position = create .position (\f r -> { r | position <- f r.position })
+position =
+    create .position (\f r -> { r | position <- f r.position })
 
 velocity : Focus { r | velocity:a } a
-velocity = create .velocity (\f r -> { r | velocity <- f r.velocity })
+velocity =
+    create .velocity (\f r -> { r | velocity <- f r.velocity })
 
