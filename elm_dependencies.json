@@ -1,0 +1,12 @@
+{
+    "version": "0.1",
+    "summary": "an experimental library for easily updating nested records",
+    "description": "This library lets you update a field deep inside nested records. The approach looks quite pretty and makes things compose nicely, but it may have some hidden costs when it comes to performance and overall code quality.",
+    "license": "BSD3",
+    "exposed-modules": [
+        "Focus"
+    ],
+    "elm-version": "0.13",
+    "dependencies": {},
+    "repository": "https://github.com/evancz/focus.git"
+}
