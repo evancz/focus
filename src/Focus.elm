@@ -29,7 +29,7 @@ creating lots of intermediate data structures for no particular reason.
 @docs create
 -}
 
-type Focus big small =
+type alias Focus big small =
     { get : big -> small
     , update : (small -> small) -> big -> big
     }

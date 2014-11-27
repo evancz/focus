@@ -1,0 +1,15 @@
+{
+    "version": "1.0.0",
+    "summary": "an experimental library for easily updating nested records",
+    "license": "BSD3",
+    "repository": "https://github.com/evancz/focus.git",
+    "source-directories": [
+        "src"
+    ],
+    "exposed-modules": [
+        "Focus"
+    ],
+    "dependencies": {
+        "elm-lang/core": "1.0.0 <= v < 2.0.0"
+    }
+}
