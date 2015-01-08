@@ -7,7 +7,7 @@ and use something that composes much more elegantly.
 
 It gives you the ability to write stuff like `freeze` in the following snippet:
 
-```haskell
+```elm
 mario =
     { super = False
     , fire  = False
