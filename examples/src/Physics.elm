@@ -29,16 +29,15 @@ main = asText (physics 1 object)
 -- Create all of the Foci
 
 x : Focus { r | x:a } a
-x = create .x (\f r -> { r | x <- f r.x })
+x = create .x (\f r -> { r | x = f r.x })
 
 y : Focus { r | y:a } a
-y = create .y (\f r -> { r | y <- f r.y })
+y = create .y (\f r -> { r | y = f r.y })
 
 position : Focus { r | position:a } a
 position =
-    create .position (\f r -> { r | position <- f r.position })
+    create .position (\f r -> { r | position = f r.position })
 
 velocity : Focus { r | velocity:a } a
 velocity =
-    create .velocity (\f r -> { r | velocity <- f r.velocity })
-
+    create .velocity (\f r -> { r | velocity = f r.velocity })
