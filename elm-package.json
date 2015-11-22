@@ -1,5 +1,5 @@
 {
-    "version": "1.0.1",
+    "version": "2.0.0",
     "summary": "an experimental library for easily updating nested records",
     "repository": "https://github.com/evancz/focus.git",
     "license": "BSD3",
