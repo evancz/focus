@@ -16,8 +16,8 @@ mario =
                 }
     }
 
-physics  = create .physics  (\f r -> { r | physics <- f r.physics })
-velocity = create .velocity (\f r -> { r | velocity <- f r.velocity })
+physics  = create .physics  (\f r -> { r | physics = f r.physics })
+velocity = create .velocity (\f r -> { r | velocity = f r.velocity })
 
 freeze object =
     set (physics => velocity) { x=0, y=0 } object
